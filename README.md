@@ -28,21 +28,22 @@ This repository is temporarily used for results display. The code will be releas
     </video>
 </div>
 <div align="center">
-    <img src="assets/VideoResults/Foreground/tiger-anime.gif">
-    </video>
-</div>
-<div align="center">
-    <img src="assets/VideoResults/Foreground/bomei_anime.gif">
-    </video>
-</div>
-<div align="center">
     <img src="assets/VideoResults/Foreground/weilai1-mecha.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/VideoResults/Foreground/tiger-anime.gif">
     </video>
 </div>
 <div align="center">
     <img src="assets/VideoResults/Foreground/womanhair-anime.gif">
     </video>
 </div>
+<div align="center">
+    <img src="assets/VideoResults/Foreground/bomei_anime.gif">
+    </video>
+</div>
+
 
 ### Background Editing
 <div align="center">
@@ -54,17 +55,24 @@ This repository is temporarily used for results display. The code will be releas
     </video>
 </div>
 <div align="center">
+    <img src="assets/VideoResults/Background/yoga2-snow.gif">
+    </video>
+</div>
+<!-- <div align="center">
     <img src="assets/VideoResults/Background/womanback-sunsetanime.gif">
     </video>
 </div>
 <div align="center">
     <img src="assets/VideoResults/Background/womandrink-sping.gif">
     </video>
-</div>
-<div align="center">
-    <img src="assets/VideoResults/Background/yoga2-snow.gif">
-    </video>
-</div>
+</div> -->
+<table class="center">
+    <tr>
+    <td><img src="assets/VideoResults/Background/womanback-sunsetanime.gif"></td>
+    <td><img src="assets/VideoResults/Background/womandrink-sping.gif"></td>
+    </tr>
+</table>
+
 
 ### Long Video Editing
 
