@@ -107,7 +107,12 @@ This repository is temporarily used for results display. The code will be releas
 
 
 ### Long Video Editing
-
+<table class="center">
+    <tr>
+    <td><img src="assets/VideoResults/LongVideo/joker.gif"></td>
+    <td><img src="assets/VideoResults/LongVideo/joker_toonyou.gif"></td>
+    </tr>
+</table>
 
 
 
