@@ -116,6 +116,30 @@ This repository is temporarily used for results display. The code will be releas
 ### Different Styles
 <table class="center">
     <tr>
+    <td><img src="assets/Gallery/Landscape/City3.gif"></td>
+    <td><img src="assets/Gallery/Landscape/City3-anime.gif"></td>
+    <td><img src="assets/Gallery/Landscape/City3-cyberpunk.gif"></td>
+    </tr>
+</table>
+
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Objects/aircraftcarrier.gif"></td>
+    <td><img src="assets/Gallery/Objects/aircraftcarrier-lego.gif"></td>
+    <td><img src="assets/Gallery/Objects/aircraftcarrier-spaceship.gif"></td>
+    </tr>
+</table>
+
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Landscape/City3.gif"></td>
+    <td><img src="assets/Gallery/Landscape/City3-anime.gif"></td>
+    <td><img src="assets/Gallery/Landscape/City3-cyberpunk.gif"></td>
+    </tr>
+</table>
+
+<table class="center">
+    <tr>
     <td><img src="assets/Gallery/Human/Hat.gif"></td>
     <td><img src="assets/Gallery/Human/Hat_majicmixRealisticbetterV2V25.gif"></td>
     <td><img src="assets/Gallery/Human/Hat-aniflatmixdepth.gif"></td>
@@ -174,6 +198,16 @@ Here are some more samples of our results.
 
 <div align="center">
     <img src="assets/Gallery/Human/Yoga-animestyle.gif">
+    </video>
+</div>
+
+<div align="center">
+    <img src="assets/Gallery/Landscape/ChongqingNight1-cyberpunk2.gif">
+    </video>
+</div>
+
+<div align="center">
+    <img src="assets/Gallery/Landscape/city-anime.gif">
     </video>
 </div>
 
