@@ -98,6 +98,12 @@ This repository is temporarily used for results display. The code will be releas
     <td><img src="assets/VideoResults/Background/womandrink-sping.gif"></td>
     </tr>
 </table>
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Human/suitguyback_technique.gif"></td>
+    <td><img src="assets/Gallery/Human/guyhorse_magicword.gif"></td>
+    </tr>
+</table>
 
 
 ### Long Video Editing
@@ -105,14 +111,38 @@ This repository is temporarily used for results display. The code will be releas
 
 
 
-## Gallery
-Here are some more samples of our results. 
-
+## Features
 
 ### Different Styles
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Human/Hat.gif"></td>
+    <td><img src="assets/Gallery/Human/Hat_majicmixRealisticbetterV2V25.gif"></td>
+    <td><img src="assets/Gallery/Human/Hat-aniflatmixdepth.gif"></td>
+    </tr>
+</table>
+
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Human/1.gif"></td>
+    <td><img src="assets/Gallery/Human/1-magicreal2.gif"></td>
+    <td><img src="assets/Gallery/Human/1-lineart.gif"></td>
+    <td><img src="assets/Gallery/Human/1-toonyousoftedge.gif"></td>
+    <td><img src="assets/Gallery/Human/1-toonyoudepth.gif"></td>
+    </tr>
+</table>
+
 
 
 ### Different Granularities
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Human/manwaterfall2.gif"></td>
+    <td><img src="assets/Gallery/Human/manwaterfall2-lineart.gif"></td>
+    <td><img src="assets/Gallery/Human/manwaterfall2-softedge.gif"></td>
+    </tr>
+</table>
+
 <table class="center">
     <tr>
     <td><img src="assets/Gallery/Human/manwaterfall1.gif"></td>
@@ -133,3 +163,11 @@ Here are some more samples of our results.
     <td><img src="assets/Gallery/Animal/tiger-panda2.gif"></td>
     </tr>
 </table>
+
+## Gallery
+Here are some more samples of our results. 
+
+<div align="center">
+    <img src="assets/Gallery/Human/flower_revAnimated.gif">
+    </video>
+</div>
