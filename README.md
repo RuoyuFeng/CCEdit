@@ -132,14 +132,6 @@ This repository is temporarily used for results display. The code will be releas
 
 <table class="center">
     <tr>
-    <td><img src="assets/Gallery/Landscape/City3.gif"></td>
-    <td><img src="assets/Gallery/Landscape/City3-anime.gif"></td>
-    <td><img src="assets/Gallery/Landscape/City3-cyberpunk.gif"></td>
-    </tr>
-</table>
-
-<table class="center">
-    <tr>
     <td><img src="assets/Gallery/Human/Hat.gif"></td>
     <td><img src="assets/Gallery/Human/Hat_majicmixRealisticbetterV2V25.gif"></td>
     <td><img src="assets/Gallery/Human/Hat-aniflatmixdepth.gif"></td>
@@ -224,8 +216,8 @@ Here are some more samples of our results.
 <table class="center">
     <tr>
     <td><img src="assets/Gallery/Objects/yacht3.gif"></td>
-    <td><img src="assets/Gallery/Objects/yacht3-spaceship.gif"></td>
-    <td><img src="assets/Gallery/Objects/yacht3-spaceship2.gif"></td>
+    <!-- <td><img src="assets/Gallery/Objects/yacht3-spaceship.gif"></td> -->
+    <!-- <td><img src="assets/Gallery/Objects/yacht3-spaceship2.gif"></td> -->
     <td><img src="assets/Gallery/Objects/yacht3-spaceship3.gif"></td>
     <td><img src="assets/Gallery/Objects/yacht3-spaceship4.gif"></td>
     </tr>
@@ -236,7 +228,7 @@ Here are some more samples of our results.
     <td><img src="assets/Gallery/Landscape/QingguiNight.gif"></td>
     <td><img src="assets/Gallery/Landscape/QingguiNight-anime2.gif"></td>
     <td><img src="assets/Gallery/Landscape/QingguiNight-anime3.gif"></td>
-    <td><img src="assets/Gallery/Landscape/QingguiNight-anime4.gif"></td>
+    <!-- <td><img src="assets/Gallery/Landscape/QingguiNight-anime4.gif"></td> -->
     <td><img src="assets/Gallery/Landscape/QingguiNight-animeflat.gif"></td>
     </tr>
 </table>
