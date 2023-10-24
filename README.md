@@ -171,3 +171,38 @@ Here are some more samples of our results.
     <img src="assets/Gallery/Human/flower_revAnimated.gif">
     </video>
 </div>
+
+<div align="center">
+    <img src="assets/Gallery/Human/Yoga-animestyle.gif">
+    </video>
+</div>
+
+<div align="center">
+    <img src="assets/Gallery/Objects/aircraftcarrier2-spaceship.gif">
+    </video>
+</div>
+
+<div align="center">
+    <img src="assets/Gallery/Objects/yacht7-spaceship2.gif">
+    </video>
+</div>
+
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Objects/yacht3.gif"></td>
+    <td><img src="assets/Gallery/Objects/yacht3-spaceship.gif"></td>
+    <td><img src="assets/Gallery/Objects/yacht3-spaceship2.gif"></td>
+    <td><img src="assets/Gallery/Objects/yacht3-spaceship3.gif"></td>
+    <td><img src="assets/Gallery/Objects/yacht3-spaceship4.gif"></td>
+    </tr>
+</table>
+
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Landscape/QingguiNight.gif"></td>
+    <td><img src="assets/Gallery/Landscape/QingguiNight-anime2.gif"></td>
+    <td><img src="assets/Gallery/Landscape/QingguiNight-anime3.gif"></td>
+    <td><img src="assets/Gallery/Landscape/QingguiNight-anime4.gif"></td>
+    <td><img src="assets/Gallery/Landscape/QingguiNight-animeflat.gif"></td>
+    </tr>
+</table>
