@@ -18,13 +18,40 @@ This repository is temporarily used for results display. The code will be releas
 
 ## Video Results
 
+### Global Transfer
+
+
+### Foreground Editing
+
+
+### Background Editing
+
+
+### Long Video Editing
+
+
+
 
 ## Gallery
 Here are some more samples of our results. 
 
-<table class="center">
+### Animal
+<!-- <table class="center">
     <tr>
     <td><img src="assets/debug/corgi.gif"></td>
     <td><img src="assets/debug/corgi-fat.gif"></td>
     </tr>
-</table>
+</table> -->
+
+<div align="center">
+    <img src="assets/debug/tiger-bear.gif">
+    </video>
+</div>
+
+### Human
+
+
+### Objects
+
+
+### Landscape
