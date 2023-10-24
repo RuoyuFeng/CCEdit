@@ -29,7 +29,7 @@ This repository is temporarily used for results display. The code will be releas
     </video>
 </div>
 <div align="center">
-    <img src="assets/VideoResults/Foreground/tiger-anime.gif">
+    <img src="assets/VideoResults/GlobalTransfer/motorcycle-paladin.gif">
     </video>
 </div>
 <table class="center">
@@ -108,32 +108,28 @@ This repository is temporarily used for results display. The code will be releas
 ## Gallery
 Here are some more samples of our results. 
 
-### Animal
-<!-- <table class="center">
-    <tr>
-    <td><img src="assets/debug/corgi.gif"></td>
-    <td><img src="assets/debug/corgi-fat.gif"></td>
-    </tr>
-</table> -->
-
-<div align="center">
-    <img src="assets/debug/tiger-bear.gif">
-    </video>
-</div>
-
-### Human
-
-
-### Objects
-
-
-### Landscape
-
 
 ### Different Styles
 
 
 ### Different Granularities
-
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Human/manwaterfall1.gif"></td>
+    <td><img src="assets/Gallery/Human/manwaterfall1-lineart.gif"></td>
+    <td><img src="assets/Gallery/Human/manwaterfall1-softedge.gif"></td>
+    <td><img src="assets/Gallery/Human/manwaterfall1-inklineart.gif"></td>
+    <td><img src="assets/Gallery/Human/manwaterfall1-inkdepthpose4.gif"></td>
+    </tr>
+</table>
 
 ### Different Content
+
+<table class="center">
+    <tr>
+    <td><img src="assets/Gallery/Animal/tiger.gif"></td>
+    <td><img src="assets/Gallery/Animal/tiger-tiger.gif"></td>
+    <td><img src="assets/Gallery/Animal/tiger-bear.gif"></td>
+    <td><img src="assets/Gallery/Animal/tiger-panda2.gif"></td>
+    </tr>
+</table>
