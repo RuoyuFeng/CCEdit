@@ -20,6 +20,32 @@ This repository is temporarily used for results display. The code will be releas
 ## Video Results
 
 ### Global Transfer
+<div align="center">
+    <img src="assets/VideoResults/GlobalTransfer/City3-cyberpunk.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/VideoResults/GlobalTransfer/dubinrunning-mechaAnimal.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/VideoResults/Foreground/tiger-anime.gif">
+    </video>
+</div>
+<table class="center">
+    <tr>
+    <td><img src="assets/VideoResults/GlobalTransfer/suitguy-mecha.gif"></td>
+    <td><img src="assets/VideoResults/GlobalTransfer/hoodguy-magicianblueeye.gif"></td>
+    </tr>
+</table>
+<table class="center">
+    <tr>
+    <td><img src="assets/VideoResults/GlobalTransfer/1-magicreal2.gif"></td>
+    <td><img src="assets/VideoResults/GlobalTransfer/Hat-counterfeitsoftedge2.gif"></td>
+    </tr>
+</table>
+
+
 
 
 ### Foreground Editing
@@ -102,3 +128,12 @@ Here are some more samples of our results.
 
 
 ### Landscape
+
+
+### Different Styles
+
+
+### Different Granularities
+
+
+### Different Content
