@@ -45,7 +45,26 @@ This repository is temporarily used for results display. The code will be releas
 </div>
 
 ### Background Editing
-
+<div align="center">
+    <img src="assets/VideoResults/Background/runningguykuanping-sunset.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/VideoResults/Background/tshirtman-MilkyWay.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/VideoResults/Background/womanback-sunsetanime.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/VideoResults/Background/womandrink-sping.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/VideoResults/Background/yoga2-snow.gif">
+    </video>
+</div>
 
 ### Long Video Editing
 
