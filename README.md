@@ -1,6 +1,5 @@
 # CCEdit
 **[CCEdit: Creative and Controllable Video Editing via Diffusion Models](https://arxiv.org/pdf/2309.16496.pdf)**
-
 </br>
 Ruoyu Feng,
 Wenming Weng,
@@ -106,14 +105,14 @@ This repository is temporarily used for results display. The code will be releas
 
 
 ### Long Video Editing
-<table class="center">
+<!-- <table class="center">
     <video width="320" height="240" controls>
         <source src="assets/VideoResults/LongVideo/Joker-1.mp4" type="video/mp4">
     </video>
     <video width="320" height="240" controls>
         <source src="assets/VideoResults/LongVideo/joker_toonyou.mp4" type="video/mp4">
     </video>
-</table>
+</table> -->
 
 
 
