@@ -26,11 +26,19 @@ This repository is temporarily used for results display. The code will be releas
 
 ### Global Transfer
 <div align="center">
+    <img src="assets/Gallery/Human/smile-revAnimatedlineart-cat.gif">
+    </video>
+</div>
+<div align="center">
     <img src="assets/VideoResults/GlobalTransfer/City3-cyberpunk.gif">
     </video>
 </div>
 <div align="center">
     <img src="assets/VideoResults/GlobalTransfer/dubinrunning-mechaAnimal.gif">
+    </video>
+</div>
+<div align="center">
+    <img src="assets/Gallery/Animal/revAnimated_kMechaAnimal.gif">
     </video>
 </div>
 <div align="center">
