@@ -38,9 +38,8 @@ This repository is temporarily used for results display. The code will be releas
 </table>
 <table class="center">
     <tr>
-    <td><img src="assets/Gallery/Human/HatLonger.gif"></td>
+    <td><img src="assets/VideoResults/GlobalTransfer/1-magicreal2.gif"></td>
     <td><img src="assets/VideoResults/GlobalTransfer/Hat-counterfeitsoftedge2.gif"></td>
-    <td><img src="assets/Gallery/Human/Hat-aniflatmixdepth.gif"></td>
     </tr>
 </table>
 
@@ -138,7 +137,8 @@ This repository is temporarily used for results display. The code will be releas
 
 <table class="center">
     <tr>
-    <td><img src="assets/Gallery/Human/Hat.gif"></td>
+    <td><img src="assets/Gallery/Human/HatLonger.gif"></td>
+    <td><img src="assets/Gallery/Human/Hat-aniflatmixdepth.gif"></td>
     <td><img src="assets/Gallery/Human/Hat_majicmixRealisticbetterV2V25.gif"></td>
     </tr>
 </table>
