@@ -15,6 +15,13 @@ Baining Guo
 
 This repository is temporarily used for results display. The code will be released soon.
 
+<table class="center">
+    <tr>
+    <td><img src="assets/VideoResults/Interpolation/makeup.gif"></td>
+    <td><img src="assets/VideoResults/Interpolation/makeup1-magicReal.gif"></td>
+    </tr>
+</table>
+
 ## Video Results
 
 ### Global Transfer
