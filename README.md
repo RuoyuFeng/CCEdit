@@ -404,6 +404,6 @@ If you find this work useful for your research, please cite us:
 
 
 ## Acknowledgements
-The source videos in this repository come from our own collections, and downloads from Pexels. If anyone feels that a particular piece of content is used inappropriately, please feel free to contact me, and I will remove it immediately.
+The source videos in this repository come from our own collections and downloads from Pexels. If anyone feels that a particular piece of content is used inappropriately, please feel free to contact me, and I will remove it immediately.
 
 Thanks to model contributers of [CivitAI](https://civitai.com/) and [RunwayML](https://runwayml.com/).
