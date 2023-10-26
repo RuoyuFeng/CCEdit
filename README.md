@@ -65,9 +65,8 @@ By default, the first video displayed is the original video, and the subsequent 
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/69438/mechamix">MechaMix</a>) Portrait shot of robot, mechanical, sophisticated ancient Egypt style filigree inlays, cyberpunk, vibrant color, half body, dark vibes, volumetric light, dramatic background.</p>
-<p style="margin-left: 0em; margin-top: 1em"></p>
-<p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A magician in hood, blue eye, blue flame.</p>
-<p style="margin-left: 0em; margin-top: 1em"></p>
+<p style="margin-left: 0em; margin-top: -1em">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A magician in hood, blue eye, blue flame.</p>
+
 
 <table class="center">
     <tr>
@@ -76,7 +75,7 @@ By default, the first video displayed is the original video, and the subsequent 
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/43331/majicmix-realistic">majicMIX realistic</a>) A young and beautiful girl.</p>
-<p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/4468?modelVersionId=57618">Counterfeit-V3.0</a>) A cute girl with a hat.</p>
+<p style="margin-left: 0em; margin-top: -1em">(Model: <a href="https://civitai.com/models/4468?modelVersionId=57618">Counterfeit-V3.0</a>) A cute girl with a hat.</p>
 
 
 
@@ -139,7 +138,7 @@ By default, the first video displayed is the original video, and the subsequent 
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/30240">ToonYou</a>) a woman is walking on the country road, sunset, back to the camera.</p>
-<p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">SD-v1.5</a>) A woman is drinking wine in a spring field.</p>
+<p style="margin-left: 0em; margin-top: -1em">(Model: <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">SD-v1.5</a>) A woman is drinking wine in a spring field.</p>
 
 <table class="center">
     <tr>
@@ -148,7 +147,7 @@ By default, the first video displayed is the original video, and the subsequent 
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A man in a suit walks into a technological city, feeling futuristic and cinematic.</p>
-<p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A man with black suit and a black horse walk in the wood.</p>
+<p style="margin-left: 0em; margin-top: -1em">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A man with black suit and a black horse walk in the wood.</p>
 
 
 ## 🌟 Features
@@ -162,7 +161,7 @@ By default, the first video displayed is the original video, and the subsequent 
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/30240">ToonYou</a>) City, anime style. </p>
-<p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/30240">ToonYou</a>) City at night, cyberpunk stile. </p>
+<p style="margin-left: 0em; margin-top: -1em">(Model: <a href="https://civitai.com/models/30240">ToonYou</a>) City at night, cyberpunk stile. </p>
 
 <table class="center">
     <tr>
@@ -172,7 +171,7 @@ By default, the first video displayed is the original video, and the subsequent 
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/110768?modelVersionId=119447">hellomecha</a>, <a href="https://civitai.com/models/130742?modelVersionId=143505">Building_block_world</a>) A LEGO-style aircraft carrier.</p>
-<p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) Spaceship flys in the sky.</p>
+<p style="margin-left: 0em; margin-top: -1em">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) Spaceship flys in the sky.</p>
 
 
 <table class="center">
@@ -183,7 +182,7 @@ By default, the first video displayed is the original video, and the subsequent 
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/4468?modelVersionId=57618">Counterfeit-V3.0</a>) A girl, anime style. </p>
-<p style="margin-left: 0em; margin-top: 1em">(Model: <a href="https://civitai.com/models/43331/majicmix-realistic">majicMIX realistic</a>) A girl.</p>
+<p style="margin-left: 0em; margin-top: -1em">(Model: <a href="https://civitai.com/models/43331/majicmix-realistic">majicMIX realistic</a>) A girl.</p>
 
 
 <table class="center">
@@ -200,17 +199,17 @@ By default, the first video displayed is the original video, and the subsequent 
 <a href="https://civitai.com/models/43331/majicmix-realistic">majicMIX realistic</a>)
 A girl.
 </p>
-<p style="margin-left: 0em; margin-top: 1em">
+<p style="margin-left: 0em; margin-top: -1em">
 (Model: 
 <a href="https://civitai.com/models/30240">ToonYou</a>) 
 A girl, anime style.
 </p>
-<p style="margin-left: 0em; margin-top: 1em">
+<p style="margin-left: 0em; margin-top: -1em">
 (Model: 
 <a href="https://civitai.com/models/30240">ToonYou</a>) 
 A girl, anime style.
 </p>
-<p style="margin-left: 0em; margin-top: 1em">
+<p style="margin-left: 0em; margin-top: -1em">
 (Model: 
 <a href="https://civitai.com/models/30240">ToonYou</a>) 
 A girl, anime style.
@@ -230,7 +229,7 @@ A girl, anime style.
 (Model: 
 <a href="https://civitai.com/models/36520?modelVersionId=76907">GhostMix</a> , <a href="https://civitai.com/models/63347/ink-splash/">泼墨 ink splash</a>) (w/o reference frame) A man holding a sword stands in front of a waterfall, cold face, ink splash style.
 </p>
-<p style="margin-left: 0em; margin-top: 1em">
+<p style="margin-left: 0em; margin-top: -1em">
 (Model: 
 <a href="https://civitai.com/models/36520?modelVersionId=76907">GhostMix</a> , <a href="https://civitai.com/models/63347/ink-splash/">泼墨 ink splash</a>) (w/o reference frame) A man holding a sword stands in front of a waterfall, cold face, ink splash style.
 </p>
@@ -244,15 +243,19 @@ A girl, anime style.
     <td><img src="assets/Gallery/Human/manwaterfall1-inkdepthpose4.gif"></td>
     </tr>
 </table>
+<p style="margin-left: 0em; margin-top: 1em">
 (Model: 
 <a href="https://civitai.com/models/36520?modelVersionId=76907">GhostMix</a> , <a href="https://civitai.com/models/63347/ink-splash/">泼墨 ink splash</a>) (w/o reference frame) A man splits the water surface with a sword, beneath a waterfall, ink splash style.
 </p>
+<p style="margin-left: 0em; margin-top: -1em">
 (Model: 
 <a href="https://civitai.com/models/36520?modelVersionId=76907">GhostMix</a> , <a href="https://civitai.com/models/63347/ink-splash/">泼墨 ink splash</a>) (w/o reference frame) A man splits the water surface with a sword, beneath a waterfall, ink splash style.
 </p>
+<p style="margin-left: 0em; margin-top: -1em">
 (Model: 
 <a href="https://civitai.com/models/36520?modelVersionId=76907">GhostMix</a> , <a href="https://civitai.com/models/63347/ink-splash/">泼墨 ink splash</a>) A man splits the water surface with a sword, beneath a waterfall, ink splash style.
 </p>
+<p style="margin-left: 0em; margin-top: -1em">
 (Model: 
 <a href="https://civitai.com/models/36520?modelVersionId=76907">GhostMix</a> , <a href="https://civitai.com/models/63347/ink-splash/">泼墨 ink splash</a>) A man splits the water surface with a sword, beneath a waterfall, ink splash style.
 </p>
@@ -268,10 +271,19 @@ A girl, anime style.
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/30240">ToonYou</a> /
-<a href="https://civitai.com/models/30240">ToonYou</a> /
-<a href="https://civitai.com/models/30240">ToonYou</a> 
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>)
+A tiger is walking, anime style.
+</p>
+<p style="margin-left: 0em; margin-top: -1em">
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>)
+A bear is walking, anime style.
+</p>
+<p style="margin-left: 0em; margin-top: -1em">
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>)
+A panda is walking, anime style.
 </p>
 
 ## 🌟 Gallery
@@ -281,10 +293,9 @@ Here are some more samples of our results.
     <img src="assets/Gallery/Human/flower_revAnimated.gif">
     </video>
 </div>
-(w/o reference frame)
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>
+(Model: 
+<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) (w/o reference frame) A beautiful woman sits in grass and smiles, flowers in background.
 </p>
 
 <div align="center">
@@ -292,8 +303,8 @@ Model:
     </video>
 </div>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/30240">ToonYou</a>
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>) A woman is doing yoga, anime style.
 </p>
 
 <div align="center">
@@ -301,8 +312,8 @@ Model:
     </video>
 </div>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/30240">ToonYou</a>
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>) City night, cyberpunk style.
 </p>
 
 <div align="center">
@@ -310,8 +321,8 @@ Model:
     </video>
 </div>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/30240">ToonYou</a>
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>) City, anime style.
 </p>
 
 <div align="center">
@@ -319,8 +330,8 @@ Model:
     </video>
 </div>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>
+(Model: 
+<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A spaceship flying in the space, galaxy background, ultra detailed, Hyperrealistic, sharp focus, UHD, octane render.
 </p>
 
 <div align="center">
@@ -328,8 +339,8 @@ Model:
     </video>
 </div>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>
+(Model: 
+<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A spaceship flying over the city.
 </p>
 
 <table class="center">
@@ -342,11 +353,13 @@ Model:
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a> /
-<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a> 
+(Model: 
+<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A spaceship flying over the city.
 </p>
-
+<p style="margin-left: 0em; margin-top: -1em">
+(Model: 
+<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A spaceship flying over the city.
+</p>
 
 <table class="center">
     <tr>
@@ -358,10 +371,19 @@ Model:
     </tr>
 </table>
 <p style="margin-left: 0em; margin-top: 1em">
-Model: 
-<a href="https://civitai.com/models/30240">ToonYou</a> /
-<a href="https://civitai.com/models/30240">ToonYou</a> / 
-<a href="https://civitai.com/models/24387?modelVersionId=40816">Aniflatmix - Anime Flat Color Style Mix (平涂り風/平涂风)</a> 
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>) 
+A light rail passes by in the city at night, anime style.
+</p>
+<p style="margin-left: 0em; margin-top: -1em">
+(Model: 
+<a href="https://civitai.com/models/30240">ToonYou</a>) 
+A light rail passes by in the city at night, anime style, high contrast.
+</p>
+<p style="margin-left: 0em; margin-top: -1em">
+(Model: 
+<a href="https://civitai.com/models/24387?modelVersionId=40816">Aniflatmix - Anime Flat Color Style Mix (平涂り風/平涂风)</a>) 
+A light rail passes by in the city at night, anime style.
 </p>
 
 
