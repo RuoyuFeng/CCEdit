@@ -15,7 +15,8 @@ Baining Guo
 
 This repository is temporarily used for results display. The code will be released later.
 
-By default, the first video displayed is the original video, and the subsequent ones are the edited results.
+By default, the first video displayed is the original video, and the subsequent ones are the edited results. 
+The longer side and the shorter side of the video are 768 and 512 pixels, respectively. The frame number and frame rate is 17 and 6fps, respectively. 
 
 <table class="center">
     <tr>
