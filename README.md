@@ -13,9 +13,15 @@ Baining Guo
 [![arXiv](https://img.shields.io/badge/arXiv-2309.16496-b31b1b.svg)](https://arxiv.org/abs/2309.16496)
 [![YoutubeVideo](https://img.shields.io/badge/YoutubeVideo-CCEdit-blue)](https://www.youtube.com/watch?v=UQw4jq-igN4)
 
+<!-- <p align="center">
+  <img src="assets/logo/ccedit.png" width="300">
+</p> -->
+
+
 This repository is temporarily used for results display. The code will be released later.
 
 By default, the first video displayed is the original video, and the subsequent ones are the edited results. 
+
 The longer side and the shorter side of the video are 768 and 512 pixels, respectively. The frame number and frame rate is 17 and 6fps, respectively. 
 
 <table class="center">
