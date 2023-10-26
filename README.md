@@ -31,7 +31,7 @@ By default, the first video displayed is the original video, and the subsequent 
     <img src="assets/Gallery/Human/smile-revAnimatedlineart-cat.gif">
     </video>
 </div>
-<p style="margin-left: 0em; margin-top: 1em">Model：<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a></p>
+<p style="margin-left: 0em; margin-top: 1em">(Model：<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A young and beautiful girl smiles to the camera, anime style.</p>
 
 <div align="center">
     <img src="assets/VideoResults/GlobalTransfer/City3-cyberpunk.gif">
@@ -43,6 +43,7 @@ By default, the first video displayed is the original video, and the subsequent 
     <img src="assets/VideoResults/GlobalTransfer/dubinrunning-mechaAnimal.gif">
     </video>
 </div>
+(w/o reference frame)
 <p style="margin-left: 0em; margin-top: 1em">Model：<a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>, <a href="https://civitai.com/models/63999?modelVersionId=68589">kMechAnimal</a></p>
 
 <div align="center">
@@ -250,6 +251,7 @@ Here are some more samples of our results.
     <img src="assets/Gallery/Human/flower_revAnimated.gif">
     </video>
 </div>
+(w/o reference frame)
 <p style="margin-left: 0em; margin-top: 1em">
 Model：
 <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>
