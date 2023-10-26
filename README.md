@@ -17,6 +17,12 @@ Baining Guo
   <img src="assets/logo/ccedit.png" width="300">
 </p> -->
 
+<table class="center">
+    <tr>
+    <td><img src="assets/VideoResults/Interpolation/makeup.gif"></td>
+    <td><img src="assets/VideoResults/Interpolation/makeup1-magicReal.gif"></td>
+    </tr>
+</table>
 
 This repository is temporarily used for results display. The code will be released later.
 
@@ -24,12 +30,7 @@ By default, the first video displayed is the original video, and the subsequent 
 
 The longer side and the shorter side of the video are 768 and 512 pixels, respectively. The frame number and frame rate is 17 and 6fps, respectively. 
 
-<table class="center">
-    <tr>
-    <td><img src="assets/VideoResults/Interpolation/makeup.gif"></td>
-    <td><img src="assets/VideoResults/Interpolation/makeup1-magicReal.gif"></td>
-    </tr>
-</table>
+
 
 ## 🌟 Video Results
 
