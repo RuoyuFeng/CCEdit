@@ -13,7 +13,9 @@ Baining Guo
 [![arXiv](https://img.shields.io/badge/arXiv-2309.16496-b31b1b.svg)](https://arxiv.org/abs/2309.16496)
 [![YoutubeVideo](https://img.shields.io/badge/YoutubeVideo-CCEdit-blue)](https://www.youtube.com/watch?v=UQw4jq-igN4)
 
-This repository is temporarily used for results display. The code will be released soon.
+This repository is temporarily used for results display. The code will be released later.
+
+By default, the first video displayed is the original video, and the subsequent ones are the edited results.
 
 <table class="center">
     <tr>
@@ -29,6 +31,9 @@ This repository is temporarily used for results display. The code will be releas
     <img src="assets/Gallery/Human/smile-revAnimatedlineart-cat.gif">
     </video>
 </div>
+Model：<a href="https://civitai.com/models/33208/filmgirl-film-grain-lora-and-loha">FilmVelvia</a>
+
+
 <div align="center">
     <img src="assets/VideoResults/GlobalTransfer/City3-cyberpunk.gif">
     </video>
@@ -252,3 +257,24 @@ Here are some more samples of our results.
     <td><img src="assets/Gallery/Landscape/QingguiNight-animeflat.gif"></td>
     </tr>
 </table>
+
+
+
+## BibTeX
+If you find this work useful for your research, please cite us:
+
+```
+@article{feng2023ccedit,
+  title={CCEdit: Creative and Controllable Video Editing via Diffusion Models},
+  author={Feng, Ruoyu and Weng, Wenming and Wang, Yanhui and Yuan, Yuhui and Bao, Jianmin and Luo, Chong and Chen, Zhibo and Guo, Baining},
+  journal={arXiv preprint arXiv:2309.16496},
+  year={2023}
+}
+```
+
+## Conact Us
+**Ruoyu Feng**: [ustcfry@mail.ustc.edu.cn](ustcfry@mail.ustc.edu.cn)  
+
+
+## Acknowledgements
+The source videos in this repository come from our own collections, and downloads from Pexels. If anyone feels that a particular piece of content is used inappropriately, please feel free to contact me, and I will remove it immediately.
