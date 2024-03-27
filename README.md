@@ -30,7 +30,8 @@ By default, the first video displayed is the original video, and the subsequent 
 
 The longer side and the shorter side of the video are 768 and 512 pixels, respectively. The frame number and frame rate is 17 and 6fps, respectively. 
 
-
+## 🔥 Update
+- 🔥 Mar. 27, 2024. [BalanceCC Benchmark](https://huggingface.co/datasets/RuoyuFeng/BalanceCC) is released! BalanceCC benchmark contains 100 videos with varied attributes, designed to offer a comprehensive platform for evaluating generative video editing, focusing on both controllability and creativity.
 
 ## 🌟 Video Results
 
