@@ -1,6 +1,8 @@
-# CCEdit
-**[CCEdit: Creative and Controllable Video Editing via Diffusion Models](https://arxiv.org/pdf/2309.16496.pdf)**
-</br>
+### <div align="center"> CCEdit: Creative and Controllable Video Editing via Diffusion Models<div> 
+### <div align="center"> CVPR 2024 <div> 
+
+
+<div align="center">
 Ruoyu Feng,
 Wenming Weng,
 Yanhui Wang,
@@ -9,9 +11,15 @@ Jianmin Bao,
 Chong Luo,
 Zhibo Chen,
 Baining Guo
+</div>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2309.16496-b31b1b.svg)](https://arxiv.org/abs/2309.16496)
-[![YoutubeVideo](https://img.shields.io/badge/YoutubeVideo-CCEdit-blue)](https://www.youtube.com/watch?v=UQw4jq-igN4)
+<br>
+
+<div align="center">
+  <a href="https://ruoyufeng.github.io/CCEdit.github.io/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a> &ensp;
+  <a href="https://huggingface.co/datasets/RuoyuFeng/BalanceCC"><img src="https://img.shields.io/static/v1?label=BalanceCC BenchMark&message=HF&color=yellow"></a> &ensp;
+  <a href="https://arxiv.org/pdf/2309.16496.pdf"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:CCEdit&color=red&logo=arxiv"></a> &ensp;
+</div>
 
 <!-- <p align="center">
   <img src="assets/logo/ccedit.png" width="300">
