@@ -1,0 +1,7 @@
+*.pyc
+*.mp4
+sgm.egg-info
+outputs
+*.ckpt
+*.npz
+src
