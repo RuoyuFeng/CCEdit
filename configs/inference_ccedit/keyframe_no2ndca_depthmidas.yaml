@@ -1,0 +1,93 @@
+NumSteps: &NumSteps 30
+
+model:
+  target: sgm.models.diffusion.VideoDiffusionEngineTV2V
+  params:
+    use_ema: False # Default is False
+    scale_factor: 0.18215
+    disable_first_stage_autocast: True
+    log_keys:
+      - txt
+    freeze_model: spatial
+
+    denoiser_config:
+      target: sgm.modules.diffusionmodules.denoiser.DiscreteDenoiser
+      params:
+        num_idx: 1000
+
+        weighting_config:
+          target: sgm.modules.diffusionmodules.denoiser_weighting.EpsWeighting
+        scaling_config:
+          target: sgm.modules.diffusionmodules.denoiser_scaling.EpsScaling
+        discretization_config:
+          target: sgm.modules.diffusionmodules.discretizer.LegacyDDPMDiscretization
+
+    network_config:
+      target: sgm.modules.diffusionmodules.controlmodel.ControlledUNetModel3DTV2V
+      params:
+        use_checkpoint: False
+        in_channels: 4
+        out_channels: 4
+        model_channels: 320
+        attention_resolutions: [4, 2, 1]
+        num_res_blocks: 2
+        channel_mult: [1, 2, 4, 4]
+        num_heads: 8
+        use_spatial_transformer: True
+        transformer_depth: 1
+        context_dim: 768
+        legacy: False
+        disable_temporal_text_ca: True
+        controlnet_config:
+          target: sgm.modules.diffusionmodules.controlmodel.ControlNet2D
+          params:
+            use_checkpoint: False
+            in_channels: 4
+            hint_channels: 3
+            model_channels: 320
+            attention_resolutions: [4, 2, 1]
+            num_res_blocks: 2
+            channel_mult: [1, 2, 4, 4]
+            num_heads: 8
+            use_spatial_transformer: True
+            transformer_depth: 1
+            context_dim: 768
+            legacy: False
+            control_scales: 1.0
+            
+    conditioner_config:
+      target: sgm.modules.GeneralConditioner
+      params:
+        emb_models:
+          # crossattn cond
+          - is_trainable: False
+            input_key: txt
+            ucg_rate: 0.5
+            legacy_ucg_value: ""
+            target: sgm.modules.encoders.modules.FrozenCLIPEmbedder
+            params:
+              freeze: true
+          - is_trainable: False
+            input_key: control_hint
+            ucg_rate: 0.01 
+            target: sgm.modules.encoders.modules.DepthMidasEncoder
+
+    first_stage_config:
+      target: sgm.models.autoencoder.AutoencoderKLInferenceWrapper
+      params:
+        embed_dim: 4
+        monitor: val/rec_loss
+        ddconfig:
+          double_z: true
+          z_channels: 4
+          resolution: 256
+          in_channels: 3
+          out_ch: 3
+          ch: 128
+          ch_mult: [1, 2, 4, 4]
+          num_res_blocks: 2
+          attn_resolutions: []
+          dropout: 0.0
+        lossconfig:
+          target: torch.nn.Identity
+

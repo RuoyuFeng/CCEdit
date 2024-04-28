@@ -1,8 +1,6 @@
-*.pyc
-*.mp4
-sgm.egg-info
-outputs
-*.ckpt
-*.npz
 src
-models
+*.pyc
+*.npz
+*.ckpt
+outputs
+sgm.egg-info/
