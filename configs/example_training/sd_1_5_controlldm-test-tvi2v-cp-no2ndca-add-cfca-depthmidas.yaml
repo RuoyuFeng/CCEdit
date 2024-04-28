@@ -1,0 +1,269 @@
+# tvi2v: condition on the frame, text, and video to generate the video
+# cp: copy weights from diffusion_model/unet to controlnet_img. Use VAE to extract the 8x downsampled image.
+# no2ndca: no second cross attention (text cross attention) in the temporal layers
+# add: add the features of reference image on the features of center frame of the main SD model
+# cfca: cross-frame cross-attention, in the main SD model, for each token as query, take the features of center image and current frame as the key and value
+
+
+
+InputFPS: &InputFPS 4
+FrameLength: &FrameLength 17
+BatchSize: &BatchSize 1
+NumGPU: &NumGPU 1
+NumNodes: &NumNodes 1
+BaseLearningRate: &BaseLearningRate 5.0e-5
+DataDir: &DataDir /PATH/TO/YOUR/DATA  # specify your data dir
+MetadataDir: &MetadataDir /PATH/TO/YOUR/METADATA  # specify your metadata dir
+ResolutionH: &ResolutionH 384
+ResolutionW: &ResolutionW 512
+Split: &Split "val" # * Debug setting
+Cut: &Cut "10M" # * Debug setting
+CkptPath: &CkptPath /PATH/TO/YOUR/CHECKPOINT  # specify your checkpoint dir
+Ckpt_log_every: &Ckpt_log_every 20000  # * Debug setting, 4000
+Image_log_every: &Image_log_every 10 # * Debug setting, 2000
+AccumulateGradBatches: &AccumulateGradBatches 1
+# DEBUG SETTINGS
+# Model_channels: &Model_channels 64
+Model_channels: &Model_channels 320
+
+model:
+  base_learning_rate: *BaseLearningRate
+  target: sgm.models.diffusion.VideoDiffusionEngineTV2V
+  params:
+    use_ema: False # Default is False
+    scale_factor: 0.18215
+    disable_first_stage_autocast: True
+    log_keys:
+      - txt
+    ckpt_path: *CkptPath  # TODO: for fast debugging, I comment this line
+    freeze_model: spatial # none indicates no freezing
+
+    scheduler_config:
+      target: sgm.lr_scheduler.LambdaLinearScheduler
+      params:
+        warm_up_steps: [ 100 ]
+        cycle_lengths: [ 10000000000000 ]
+        f_start: [ 1.e-6 ]
+        f_max: [ 1. ]
+        f_min: [ 1. ]
+
+    denoiser_config:
+      target: sgm.modules.diffusionmodules.denoiser.DiscreteDenoiser
+      params:
+        num_idx: 1000
+
+        weighting_config:
+          target: sgm.modules.diffusionmodules.denoiser_weighting.EpsWeighting
+        scaling_config:
+          target: sgm.modules.diffusionmodules.denoiser_scaling.EpsScaling
+        discretization_config:
+          target: sgm.modules.diffusionmodules.discretizer.LegacyDDPMDiscretization
+
+    network_config:
+      target: sgm.modules.diffusionmodules.controlmodel.ControlledUNetModel3DTV2V
+      params:
+        use_checkpoint: True
+        in_channels: 4
+        out_channels: 4
+        model_channels: *Model_channels
+        attention_resolutions: [4, 2, 1]
+        num_res_blocks: 2
+        channel_mult: [1, 2, 4, 4]
+        num_heads: 8
+        use_spatial_transformer: True
+        transformer_depth: 1
+        context_dim: 768
+        legacy: False
+        disable_temporal_text_ca: True
+        # -> use "temporal_ca" modules
+        enable_attention3d_crossframe: True
+        ST3DCA_ca_type: 'center_self'
+        # crossframe_type: 'reference'  # not use the reference image as k,v, so comment it.
+        controlnet_config:
+          target: sgm.modules.diffusionmodules.controlmodel.ControlNet2D
+          params:
+            use_checkpoint: True
+            in_channels: 4
+            hint_channels: 3
+            model_channels: *Model_channels
+            attention_resolutions: [4, 2, 1]
+            num_res_blocks: 2
+            channel_mult: [1, 2, 4, 4]
+            num_heads: 8
+            use_spatial_transformer: True
+            transformer_depth: 1
+            context_dim: 768
+            legacy: False
+            control_scales: 1.0
+        controlnet_img_config:  # process the anchor frame
+          target: sgm.modules.diffusionmodules.controlmodel.ControlNet2D
+          params:
+            use_checkpoint: True
+            in_channels: 4
+            hint_channels: 3
+            model_channels: *Model_channels
+            attention_resolutions: [4, 2, 1]
+            num_res_blocks: 2
+            channel_mult: [1, 2, 4, 4]
+            num_heads: 8
+            use_spatial_transformer: True
+            transformer_depth: 1
+            context_dim: 768
+            legacy: False
+            # -> add on center frame, strengthen the control
+            control_scales: 1.0
+            # control_scales: 0.0 # use crossattention, instead of add in controlnet
+            # -> not add the noised x to controlnet_img
+            no_add_x: True # no need to add x
+            set_input_hint_block_as_identity: True # ATTENTION: newly added. default: False
+            # -> disbale the text cross attention in controlnet_img
+            disable_text_ca: True
+
+    conditioner_config:
+      target: sgm.modules.GeneralConditioner
+      params:
+        emb_models:
+          # crossattn cond
+          - is_trainable: False
+            input_key: txt
+            ucg_rate: 0.5 
+            legacy_ucg_value: ""
+            target: sgm.modules.encoders.modules.FrozenCLIPEmbedder
+            params:
+              freeze: true
+          - is_trainable: False
+            input_key: control_hint
+            ucg_rate: 0.0  
+            target: sgm.modules.encoders.modules.DepthMidasEncoder
+          - is_trainable: False
+            input_key: cond_img
+            ucg_rate: 0.0
+            target: sgm.modules.encoders.modules.VAEEmbedder
+
+    first_stage_config:
+      target: sgm.models.autoencoder.AutoencoderKLInferenceWrapper
+      params:
+        embed_dim: 4
+        monitor: val/rec_loss
+        ddconfig:
+          double_z: true
+          z_channels: 4
+          resolution: 256
+          in_channels: 3
+          out_ch: 3
+          ch: 128
+          ch_mult: [1, 2, 4, 4]
+          num_res_blocks: 2
+          attn_resolutions: []
+          dropout: 0.0
+        lossconfig:
+          target: torch.nn.Identity
+
+    loss_fn_config:
+      target: sgm.modules.diffusionmodules.loss.StandardDiffusionLoss
+      params:
+        sigma_sampler_config:
+          target: sgm.modules.diffusionmodules.sigma_sampling.DiscreteSampling
+          params:
+            num_idx: 1000
+
+            discretization_config:
+              target: sgm.modules.diffusionmodules.discretizer.LegacyDDPMDiscretization
+        offset_noise_level: 0.1
+        offset_noise_varying_dim: 3
+
+    sampler_config:
+      target: sgm.modules.diffusionmodules.sampling.EulerAncestralSampler # ATTENTION: newly add. Default: EulerEDMSampler
+      params:
+        num_steps: 30 # ATTENTION: newly add. default: 50
+
+        discretization_config:
+          target: sgm.modules.diffusionmodules.discretizer.LegacyDDPMDiscretization
+
+        guider_config:
+          target: sgm.modules.diffusionmodules.guiders.VanillaCFGTV2V
+          params:
+            scale: 7.5
+
+data:
+  target: sgm.data.detaset_webvid.DataModuleFromConfig
+  params:
+    batch_size: *BatchSize # TODO need to change batch_size
+    num_workers: 8
+    wrap: False
+    train:
+      target: sgm.data.webvid.webvid_dataset.WebVid
+      params:
+        dataset_name: WebVid
+        data_dir: *DataDir # TODO check the data_dir
+        metadata_dir: *MetadataDir
+        split: *Split
+        cut: *Cut
+        # key: *Key # TODO check data file name, default cleaned
+        subsample: 1
+        text_params:
+          input: text
+        video_params:
+          input_res_h:  *ResolutionH
+          input_res_w: *ResolutionW
+          tsfm_params:
+            norm_mean: [0.5, 0.5, 0.5]
+            norm_std: [0.5, 0.5, 0.5]
+            randcrop_scale: [0.8, 1.0]  # ATTENTION: newly add.
+          num_frames: *FrameLength 
+          prop_factor: *InputFPS
+          loading: lax
+        metadata_folder_name: webvid10m_meta
+        first_stage_key: jpg
+        cond_stage_key: txt
+        skip_missing_files: True
+        use_control_hint: True
+        # -> use center frame as the condition image
+        # random_cond_img: True
+
+lightning:
+  modelcheckpoint:
+    params:
+      every_n_train_steps: *Ckpt_log_every
+
+  callbacks:
+    metrics_over_trainsteps_checkpoint:
+      params:
+        every_n_train_steps: 25000
+
+    image_logger:
+      target: main.ImageLogger
+      params:
+        disabled: False
+        enable_autocast: False
+        batch_frequency: *Image_log_every
+        max_images: 32
+        increase_log_steps: False # default is True
+        log_first_step: False
+        log_images_kwargs:
+          use_ema_scope: False
+          N: 8
+          n_rows: *FrameLength
+          video_fps: *InputFPS
+
+  trainer:
+    precision: 16
+    devices: *NumGPU
+    num_nodes: *NumNodes
+    benchmark: True
+    num_sanity_val_steps: 0
+    accumulate_grad_batches: *AccumulateGradBatches
+    max_epochs: 1000
+
+  strategy:
+    target: pytorch_lightning.strategies.DDPStrategy
+    params:
+      find_unused_parameters: True
+
+  # strategy:
+    # target: pytorch_lightning.strategies.DeepSpeedStrategy
+    # params:
+    #   stage: 2
+    #   allgather_bucket_size: 8e8
+    #   reduce_bucket_size: 8e8
+    #   load_full_weights: True

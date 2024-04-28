@@ -1,0 +1,6 @@
+src
+*.pyc
+*.npz
+*.ckpt
+outputs
+sgm.egg-info/
