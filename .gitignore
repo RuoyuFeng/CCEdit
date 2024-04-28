@@ -5,3 +5,4 @@ outputs
 *.ckpt
 *.npz
 src
+models
