@@ -23,8 +23,8 @@ Baining Guo
 
 <table class="center">
     <tr>
-    <td><img src="assets/VideoResults/Interpolation/makeup.gif"></td>
-    <td><img src="assets/VideoResults/Interpolation/makeup1-magicReal.gif"></td>
+    <td><img src="assets/makeup.gif"></td>
+    <td><img src="assets/makeup1-magicReal.gif"></td>
     </tr>
 </table>
 
