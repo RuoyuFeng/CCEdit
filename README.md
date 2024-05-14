@@ -58,7 +58,7 @@ python scripts/sampling/sampling_tv2v.py   \
     --H 512 --W 768 --original_fps 18 --target_fps 6 --num_keyframes 17 --batch_size 1 --num_samples 2 \
     --sample_steps 30 --sampler_name DPMPP2SAncestralSampler \
     --cfg_scale 7.5 \
-    --prompt 'a bear is walking.' 
+    --prompt 'a bear is walking.' \
     --video_path assets/Samples/davis/bear \
     --add_prompt 'Van Gogh style' \
     --save_path outputs/tv2v/bear-VanGogh \
