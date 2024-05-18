@@ -4,3 +4,5 @@ src
 *.ckpt
 outputs
 sgm.egg-info/
+latents_forward
+PNP-results
