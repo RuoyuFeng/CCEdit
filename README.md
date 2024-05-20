@@ -40,31 +40,20 @@ pip install -r requirements.txt
 # pip install -r requirements_pt2.txt
 # pip install torch==2.0.1 torchaudio==2.0.2 torchdata==0.6.1 torchmetrics==1.0.0 torchvision==0.15.2
 pip install basicsr==1.4.2 wandb loralib av decord timm==0.6.7
-pip install moviepy imageio==2.6.0 scikit-image==0.20.0 scipy==1.9.1 diffusers==0.24.0 transformers==4.27.3
+pip install moviepy imageio==2.6.0 scikit-image==0.20.0 scipy==1.9.1 diffusers==0.17.1 transformers==4.27.3
 pip install accelerate==0.20.3 ujson
 
 git clone https://github.com/lllyasviel/ControlNet-v1-1-nightly src/controlnet11
+git clone https://github.com/MichalGeyer/pnp-diffusers src/pnp-diffusers
 ```
 
-## Download models
+# Download models
 download models from https://huggingface.co/RuoyuFeng/CCEdit and put them in ./models
 
-## Inference and training
-```
-# inference (tv2v)
-python scripts/sampling/sampling_tv2v.py   \
-    --config_path configs/inference_ccedit/keyframe_no2ndca_depthmidas.yaml \
-    --ckpt_path models/tv2v-no2ndca-depthmidas.ckpt \
-    --H 512 --W 768 --original_fps 18 --target_fps 6 --num_keyframes 17 --batch_size 1 --num_samples 2 \
-    --sample_steps 30 --sampler_name DPMPP2SAncestralSampler \
-    --cfg_scale 7.5 \
-    --prompt 'a bear is walking.' \
-    --video_path assets/Samples/davis/bear \
-    --add_prompt 'Van Gogh style' \
-    --save_path outputs/tv2v/bear-VanGogh \
-    --disable_check_repeat
+# Inference (tv2v)
+python scripts/sampling/sampling_tv2v.py   --config_path configs/inference_ccedit/keyframe_no2ndca_depthmidas.yaml   --ckpt_path models/tv2v-no2ndca-depthmidas.ckpt  --H 512 --W 768 --original_fps 18 --target_fps 6 --num_keyframes 17 --batch_size 1 --num_samples 2   --sample_steps 30 --sampler_name DPMPP2SAncestralSampler  --cfg_scale 7.5   --prompt 'a bear is walking.' --video_path assets/Samples/davis/bear   --add_prompt 'Van Gogh style'   --save_path outputs/tv2v/bear-VanGogh   --disable_check_repeat
 
-# inference (tvi2v)
+# Inference (tvi2v, specifiy the edited center frame)
 python scripts/sampling/sampling_tv2v_ref.py \
     --seed 201574 \
     --config_path configs/inference_ccedit/keyframe_ref_cp_no2ndca_add_cfca_depthzoe.yaml \
@@ -79,6 +68,29 @@ python scripts/sampling/sampling_tv2v_ref.py \
     --disable_check_repeat \
     --prior_coefficient_x 0.03 \
     --prior_type ref
+
+# Inference (tvi2v, automatic edit the center frame via [pnp-diffusers](https://github.com/MichalGeyer/pnp-diffusers))
+# Note that the performance of this pipeline heavily depends on the quality of the automatic editing result. So try to use more powerful automatic editing methods to edit the center frame. Or we recommond combine CCEdit with other powerfull AI editing tools, such as Stable-Diffusion WebUI, comfyui, etc.
+# python preprocess.py --data_path <path_to_guidance_image> --inversion_prompt <inversion_prompt>
+python src/pnp-diffusers/preprocess.py --data_path assets/Samples/tshirtman-milkyway.png --inversion_prompt 'a man walks in the filed'
+# modify the config file (config_pnp.yaml) to use the processed image
+# python pnp.py --config_path <pnp_config_path>
+python src/pnp-diffusers/pnp.py --config_path config_pnp.yaml
+python scripts/sampling/sampling_tv2v_ref.py \
+    --seed 201574 \
+    --config_path configs/inference_ccedit/keyframe_ref_cp_no2ndca_add_cfca_depthzoe.yaml \
+    --ckpt_path models/tvi2v-no2ndca-depthmidas.ckpt \
+    --H 512 --W 768 --original_fps 18 --target_fps 6 --num_keyframes 17 --batch_size 1 --num_samples 2 \
+    --sample_steps 50 --sampler_name DPMPP2SAncestralSampler --cfg_scale 7 \
+    --prompt 'A person walks on the grass, the Milky Way is in the sky, night' \
+    --add_prompt 'masterpiece, best quality,' \
+    --video_path assets/Samples/tshirtman.mp4 \
+    --reference_path "PNP-results/tshirtman-milkyway/output-a man walks in the filed, milky way.png" \
+    --save_path outputs/tvi2v/tshirtman-MilkyWay \
+    --disable_check_repeat \
+    --prior_coefficient_x 0.03 \
+    --prior_type ref
+
 
 # train example
 python main.py -b configs/example_training/sd_1_5_controlldm-test-ruoyu-tv2v-depthmidas.yaml --wandb False
