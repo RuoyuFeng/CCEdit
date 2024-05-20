@@ -39,6 +39,8 @@ git clone https://github.com/MichalGeyer/pnp-diffusers src/pnp-diffusers
 # Download models
 download models from https://huggingface.co/RuoyuFeng/CCEdit and put them in ./models
 
+## Inference and training examples
+```
 # Inference (tv2v)
 python scripts/sampling/sampling_tv2v.py   --config_path configs/inference_ccedit/keyframe_no2ndca_depthmidas.yaml   --ckpt_path models/tv2v-no2ndca-depthmidas.ckpt  --H 512 --W 768 --original_fps 18 --target_fps 6 --num_keyframes 17 --batch_size 1 --num_samples 2   --sample_steps 30 --sampler_name DPMPP2SAncestralSampler  --cfg_scale 7.5   --prompt 'a bear is walking.' --video_path assets/Samples/davis/bear   --add_prompt 'Van Gogh style'   --save_path outputs/tv2v/bear-VanGogh   --disable_check_repeat
 
