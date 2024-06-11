@@ -50,12 +50,16 @@ git clone https://github.com/MichalGeyer/pnp-diffusers src/pnp-diffusers
 # Download models
 download models from https://huggingface.co/RuoyuFeng/CCEdit and put them in ./models
 
-## Inference and training examples
-```
-# Inference (tv2v)
+<!-- ## Inference and training examples -->
+## Inference
+### Text-Video-to-Video
+```bash
 python scripts/sampling/sampling_tv2v.py   --config_path configs/inference_ccedit/keyframe_no2ndca_depthmidas.yaml   --ckpt_path models/tv2v-no2ndca-depthmidas.ckpt  --H 512 --W 768 --original_fps 18 --target_fps 6 --num_keyframes 17 --batch_size 1 --num_samples 2   --sample_steps 30 --sampler_name DPMPP2SAncestralSampler  --cfg_scale 7.5   --prompt 'a bear is walking.' --video_path assets/Samples/davis/bear   --add_prompt 'Van Gogh style'   --save_path outputs/tv2v/bear-VanGogh   --disable_check_repeat
+```
 
-# Inference (tvi2v, specifiy the edited center frame)
+### Text-Video-Image-to-Video
+Specifiy the edited center frame.
+```bash
 python scripts/sampling/sampling_tv2v_ref.py \
     --seed 201574 \
     --config_path configs/inference_ccedit/keyframe_ref_cp_no2ndca_add_cfca_depthzoe.yaml \
@@ -70,9 +74,11 @@ python scripts/sampling/sampling_tv2v_ref.py \
     --disable_check_repeat \
     --prior_coefficient_x 0.03 \
     --prior_type ref
+```
 
-# Inference (tvi2v, automatic edit the center frame via [pnp-diffusers](https://github.com/MichalGeyer/pnp-diffusers))
-# Note that the performance of this pipeline heavily depends on the quality of the automatic editing result. So try to use more powerful automatic editing methods to edit the center frame. Or we recommond combine CCEdit with other powerfull AI editing tools, such as Stable-Diffusion WebUI, comfyui, etc.
+Automatic edit the center frame via [pnp-diffusers](https://github.com/MichalGeyer/pnp-diffusers)
+Note that the performance of this pipeline heavily depends on the quality of the automatic editing result. So try to use more powerful automatic editing methods to edit the center frame. Or we recommond combine CCEdit with other powerfull AI editing tools, such as Stable-Diffusion WebUI, comfyui, etc.
+```bash
 # python preprocess.py --data_path <path_to_guidance_image> --inversion_prompt <inversion_prompt>
 python src/pnp-diffusers/preprocess.py --data_path assets/Samples/tshirtman-milkyway.png --inversion_prompt 'a man walks in the filed'
 # modify the config file (config_pnp.yaml) to use the processed image
@@ -92,8 +98,10 @@ python scripts/sampling/sampling_tv2v_ref.py \
     --disable_check_repeat \
     --prior_coefficient_x 0.03 \
     --prior_type ref
+```
 
-# Inference (tvi2v). You can use the following pipeline to automatically extract the center frame, conduct editing via pnp-diffusers and then conduct video editing via tvi2v.
+You can use the following pipeline to automatically extract the center frame, conduct editing via pnp-diffusers and then conduct video editing via tvi2v.
+```bash
 python scripts/sampling/pnp_generate_config.py \
     --p_config config_pnp_auto.yaml \
     --output_path "outputs/automatic_ref_editing/image" \
@@ -124,9 +132,10 @@ python scripts/sampling/sampling_tv2v_ref.py \
     --disable_check_repeat \
     --prior_coefficient_x 0.03 \
     --prior_type ref
+```
 
-
-# train example
+## Train example
+```bash
 python main.py -b configs/example_training/sd_1_5_controlldm-test-ruoyu-tv2v-depthmidas.yaml --wandb False
 ```
 
