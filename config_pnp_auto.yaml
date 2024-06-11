@@ -1,0 +1,12 @@
+seed: 1
+device: cuda
+output_path: outputs/automatic_ref_editing/image
+image_path: outputs/centerframe/tshirtman.png
+latents_path: latents_forward
+sd_version: '2.1'
+guidance_scale: 7.5
+n_timesteps: 50
+prompt: a man walks on the beach
+negative_prompt: ugly, blurry, black, low res, unrealistic
+pnp_attn_t: 0.5
+pnp_f_t: 0.8
