@@ -93,14 +93,13 @@ python scripts/sampling/sampling_tv2v_ref.py \
     --prior_coefficient_x 0.03 \
     --prior_type ref
 
-# You can use the following script to extract the center frame. Modify `p_video` and `p_save`
+# Inference (tvi2v). You can use the following pipeline to automatically extract the center frame, conduct editing via pnp-diffusers and then conduct video editing via tvi2v.
 python scripts/sampling/pnp_generate_config.py \
     --p_config config_pnp_auto.yaml \
     --output_path "outputs/automatic_ref_editing/image" \
     --image_path "outputs/centerframe/tshirtman.png" \
     --latents_path "latents_forward" \
     --prompt "a man walks on the beach" 
-
 python scripts/tools/extract_centerframe.py \
     --p_video assets/Samples/tshirtman.mp4 \
     --p_save outputs/centerframe/tshirtman.png \
@@ -109,11 +108,8 @@ python scripts/tools/extract_centerframe.py \
     --n_keyframes 17 \
     --length_long 512 \
     --length_short 512
-
 python src/pnp-diffusers/preprocess.py --data_path outputs/centerframe/tshirtman.png --inversion_prompt 'a man walks in the filed'
-
 python src/pnp-diffusers/pnp.py --config_path config_pnp_auto.yaml
-
 python scripts/sampling/sampling_tv2v_ref.py \
     --seed 201574 \
     --config_path configs/inference_ccedit/keyframe_ref_cp_no2ndca_add_cfca_depthzoe.yaml \
